@@ -49,7 +49,7 @@ $permissoes = [
 ];
 
 // Obtendo as opções disponíveis para o perfil logado
-$opcoes_menu = $permissoes['id_perfil'];
+$opcoes_menu = $permissoes[$id_perfil];
 
 ?>
 
@@ -83,8 +83,8 @@ $opcoes_menu = $permissoes['id_perfil'];
                     <ul class="dropdown-menu">
                         <?php foreach($arquivos as $arquivo): ?>
                             <li class=>
-                                <a href="<?= $arquivo ?>"
-                                <?= ucfirst(str_replace("_"," ",basename($arquivo,".php"))); ?>></a>
+                                <a href="<?= $arquivo ?>">
+                                <?= ucfirst(str_replace("_"," ",basename($arquivo,".php"))); ?></a>
                             </li>
                         <?php endforeach; ?>
                     </ul>

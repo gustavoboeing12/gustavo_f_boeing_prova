@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "<script>alert('As senhas não coincidem!');</script>";
     } elseif(strlen($nova_senha) < 8){
         echo "<script>alert('A senha deve ter pelo menos 8 caracteres');</script>";
-    } elseif(nova_senha === "temp123"){
+    } elseif($nova_senha === "temp123"){
         echo "<script>alert('Escolha uma senha diferente de temporária');</script>";
     } else{
         $senha_hash = password_hash($nova_senha, PASSWORD_DEFAULT);
