@@ -3,7 +3,7 @@ session_start();
 require_once('conexao.php');
 
 if(!isset($_SESSION['usuario'])){
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -13,7 +13,7 @@ $sqlPerfil = "SELECT nome,perfil FROM perfil WHERE id_perfil = :id_perfil";
 
 $stmtPerfil = $pdo -> prepare($sqlPerfil);
 $stmtPerfil -> bindParam(":id_perfil",$id_perfil);
-$stmt -> execute();
+$stmtPerfil -> execute();
 $perfil = $stmtPerfil -> fetch(PDO::FETCH_ASSOC);
 $nome_perfil = $perfil['nome_perfil'];
 
