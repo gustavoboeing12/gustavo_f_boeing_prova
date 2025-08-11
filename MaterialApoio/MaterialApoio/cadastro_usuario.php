@@ -58,11 +58,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <option value="3">Almoxarife</option>
             <option value="4">Cliente</option>
         </select>
-        
+
         <button type="submit">Salvar</button>
         <button type="reset">Cancelar</button>
      </form>
-
+     
      <a href="principal.php">Voltar</a>
 </body>
 </html>
