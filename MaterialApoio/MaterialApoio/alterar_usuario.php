@@ -75,9 +75,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <label for="id_perfil">Perfil:</label>
            <select id="id_perfil" name="id_perfil">
               <option value="1" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Administrador</option>
-              <option></option>
-              <option></option>
-              <option></option>
+              <option value="2" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Secretária</option>
+              <option value="3" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Almoxarife</option>
+              <option value="4" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Cliente</option>
+             
            </select>
        </form>
 </body>
