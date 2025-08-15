@@ -45,19 +45,18 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-     <h2>Login</h2>
      <form action="index.php" method="POST">
-        <label for="email">E=mail</label>
+     <h2>Login</h2>
+        <label for="email">E-mail</label>
         <input type="email" name="email" id="email" required>
 
         <label for="senha">Senha</label>
         <input type="password" name="senha" id="senha" required>
+        <a href="recuperar_senha.php">Esqueci a minha senha</a>
+        <p></p>
 
         <button type="submit">Entrar</button>
      </form>
 
-     <p>
-        <a href="recuperar_senha.php">Esqueci a minha senha</a>
-     </p>
 </body>
 </html>

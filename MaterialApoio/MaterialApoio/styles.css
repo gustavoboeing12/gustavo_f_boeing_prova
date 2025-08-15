@@ -168,9 +168,3 @@ button {
 button:hover {
     background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
-
-a{
-   background-color: #0056b3;
-   width:30px;
-   height:30px;
-}
