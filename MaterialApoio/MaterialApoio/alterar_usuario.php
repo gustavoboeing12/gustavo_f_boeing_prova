@@ -32,7 +32,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "<script>alert('Usuário não encontrado!');</script>";
         }
     }
-
 }
 ?>
 
@@ -78,9 +77,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               <option value="2" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Secretária</option>
               <option value="3" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Almoxarife</option>
               <option value="4" <?=$usuario['id_perfil'] == 1 ? 'select':''?>>Cliente</option>
-             
            </select>
+       <!--Se o usuário logado for adm, exibir opção de alterar senha-->
+       <?php if($_SESSION['perfil'] == 1): ?>
+           <label for="nova_senha">Nova senha</label>
+           <input type="password" id="nova_senha" name="nova_senha">
+       <?php endif; ?>
+
+           <button type="submit">Alterar</button>
+           <button type="reset">Cancelar</button>
        </form>
+     <?php endif; ?>
+
+     <a href="principal.php">Voltar</a>
 </body>
 </html>
 
