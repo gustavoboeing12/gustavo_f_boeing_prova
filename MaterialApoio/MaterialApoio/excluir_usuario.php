@@ -1,6 +1,7 @@
 <?php
 session_start();
 require ('conexao.php');
+require_once ('permissoes.php');
 
 // Verifica se o usuário tem permissão de adm
 if($_SESSION['perfil'] != 1){
@@ -46,7 +47,7 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
 <body>
      <h2>Excluir usuário</h2>
      <?php if(!empty($usuarios)): ?>
-        <table border="1" align="center">
+        <table class="tabela">
             <tr>
                 <th>ID</th>
                 <th>Nome</th>

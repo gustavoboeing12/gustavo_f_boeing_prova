@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('conexao.php');
+require_once('permissoes.php');
 
 // Verifica se o usuário tem permissão supondo que o perfil 1 sejá o admin
 if($_SESSION['perfil'] != 1){
@@ -36,9 +37,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
+    <script src="validacao.js"></script>
     <title>Cadastrar usuário</title>
 </head>
 <body>
+     
      <h2>Cadastrar usuário</h2>
 
      <form action="cadastro_usuario.php" method="POST">

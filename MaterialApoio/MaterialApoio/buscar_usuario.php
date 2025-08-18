@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('conexao.php');
+require_once('permissoes.php');
 
 // Verifica se o usuário tem permissão de adm ou secretária
 if($_SESSION['perfil'] != 1 && $_SESSION['perfil'] != 2){
@@ -41,10 +42,10 @@ $usuarios = $stmt -> fetchAll(PDO::FETCH_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <title>Buscar usuário</title>
 </head>
 <body>
+
      <h2>Lista de usuários</h2>
 
      <form action="buscar_usuario.php" method="POST">
@@ -53,7 +54,7 @@ $usuarios = $stmt -> fetchAll(PDO::FETCH_ASSOC);
         <button type="submit">Pesquisar</button>
      </form>
      <?php if(!empty($usuarios)): ?>
-     <table class="table table-dark">
+     <table class="tabela">
             <tr>
                <th>ID</th>
                <th>Nome</th>

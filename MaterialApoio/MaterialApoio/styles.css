@@ -79,6 +79,7 @@ header {
     top: 100%;
     left: 0;
     background-color: #444;
+    background: linear-gradient(-310deg, #222, #444, #666);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -90,6 +91,7 @@ header {
     display: block;
     color: white;
     text-decoration: none;
+    background: linear-gradient(310deg, #222, #444, #666);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -168,3 +170,22 @@ button {
 button:hover {
     background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
 }
+
+.tabela{
+    width: 100%;             
+    border-collapse: collapse; 
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.tabela th,
+.tabela td {
+  border: 1px solid #ccc;  
+  padding: 10px 15px;      
+  text-align: left;         
+}
+
+.tabela tbody tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+

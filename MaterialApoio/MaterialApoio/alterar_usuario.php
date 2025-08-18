@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('conexao.php');
+require_once('permissoes.php');
 
 // Verifica se o usuário tem permissão de adm
 if($_SESSION['perfil'] != 1){
@@ -46,6 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Alterar usuário</title>
 </head>
 <body>
+
      <h2>Alterar usuário</h2>
 
      <form action="alterar_usuario.php" method="POST">
