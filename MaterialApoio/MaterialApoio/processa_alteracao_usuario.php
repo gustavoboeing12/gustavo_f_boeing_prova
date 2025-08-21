@@ -1,6 +1,7 @@
 <?php
 session_start();
 require ('conexao.php');
+require_once ('permissoes.php');
 
 if($_SESSION['perfil'] != 1){
     echo "<script>alert('Acesso negado!');window.location.href='principal.php';</script>";

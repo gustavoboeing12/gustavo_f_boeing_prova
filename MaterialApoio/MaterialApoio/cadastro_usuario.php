@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <script src="validacao.js"></script>
+    <script src="validacoes.js"></script>
     <title>Cadastrar usuário</title>
 </head>
 <body>
@@ -66,5 +66,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <button type="reset">Cancelar</button>
      </form>
      <a href="principal.php">Voltar</a>
+     <br><br>
+     <center>
+        <address>Gustavo Fratoni Boeing</address>
+     </center>
 </body>
 </html>

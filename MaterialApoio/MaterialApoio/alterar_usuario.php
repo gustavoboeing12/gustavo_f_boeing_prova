@@ -92,6 +92,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <?php endif; ?>
 
      <a href="principal.php">Voltar</a>
+     <br><br>
+     <center>
+        <address>Gustavo Fratoni Boeing</address>
+     </center>
 </body>
 </html>
 

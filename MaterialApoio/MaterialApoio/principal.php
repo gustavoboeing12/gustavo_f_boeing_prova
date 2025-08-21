@@ -92,5 +92,9 @@ $opcoes_menu = $permissoes[$id_perfil];
             <?php endforeach; ?>
         </ul>
      </nav>
+     <br><br>
+     <center>
+        <address>Gustavo Fratoni Boeing</address>
+     </center>
 </body>
 </html>

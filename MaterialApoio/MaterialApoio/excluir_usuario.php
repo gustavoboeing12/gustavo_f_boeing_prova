@@ -72,5 +72,9 @@ if(isset($_GET['id']) && is_numeric($_GET['id'])){
      <?php endif; ?>
 
      <a href="principal.php">Voltar</a>
+     <br><br>
+     <center>
+        <address>Gustavo Fratoni Boeing</address>
+     </center>
 </body>
 </html>
