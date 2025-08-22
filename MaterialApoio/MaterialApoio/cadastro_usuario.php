@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <script src="validacoes.js"></script>
+    <script type="text/javascript" src="valida.js"></script>
     <title>Cadastrar usuário</title>
 </head>
 <body>
@@ -46,13 +46,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
      <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome: </label>
-        <input type="text" id="nome" name="nome" required/>
+        <input type="text" id="nome" name="nome" minlength="3" required/>
 
         <label for="email">E-mail: </label>
-        <input type="email" id="email" name="email" required/>
+        <input type="email" id="email" name="email" minlength="5" required/>
 
         <label for="senha">Senha: </label>
-        <input type="password" id="senha" name="senha" required/>
+        <input type="password" id="senha" name="senha" minlength="8" required/>
 
         <label for="id_perfil">Perfil: </label>
         <select id="id_perfil" name="id_perfil">
@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <option value="4">Cliente</option>
         </select>
 
-        <button type="submit">Salvar</button>
+        <button type="submit" onclick return="validarCadastroUsuario()">Salvar</button>
         <button type="reset">Cancelar</button>
      </form>
      <a href="principal.php">Voltar</a>
