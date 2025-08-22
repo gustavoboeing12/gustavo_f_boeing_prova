@@ -56,16 +56,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
      <form action="cadastro_funcionario.php" method="POST">
         <label for="nome_funcionario">Nome: </label>
-        <input type="text" id="nome_funcionario" name="nome_funcionario" minlength="3" required/>
+        <input type="text" id="nome_funcionario" name="nome_funcionario" title="Apenas letras" placeholder="Gustavo Boeing" minlength="3" required pattern="[A-Za-zÁ-ÿ\s]+"/>
 
         <label for="endereco">Endereço: </label>
-        <input type="text" id="endereco" name="endereco" minlength="5" required/>
+        <input type="text" id="endereco" name="endereco" title="Mínimo de 5 letras" placeholder="Rua das gaivotas 123" minlength="5" required/>
 
         <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" class="phone" size="15" maxlength="15" required/>
+        <input type="text" id="telefone" name="telefone" class="phone" placeholder="(00)00000-0000" size="15" maxlength="15" required/>
 
         <label for="email">Email: </label>
-        <input type="email" id="email" name="email" minlength="5" required/>
+        <input type="email" id="email" name="email" title="Coloque um email válido" placeholder="Email@gmail.com" minlength="5" required/>
 
         <button type="submit" onclick return="validarCadastroFuncionario()">Salvar</button>
         <button type="reset">Cancelar</button>
