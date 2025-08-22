@@ -85,7 +85,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
            <label for="email">E-mail:</label>
            <input type="email" id="email "name="email" 
-           value="<?= htmlspecialchars($funcionario['email']) ?>"minlength="3" required>
+           value="<?= htmlspecialchars($funcionario['email']) ?>"minlength="5" required>
 
            <button type="submit" onclick return="validarFormulario()">Alterar</button>
            <button type="reset">Cancelar</button>
