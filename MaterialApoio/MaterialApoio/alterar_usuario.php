@@ -68,11 +68,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
            <label for="nome">Nome:</label>
            <input type="text" id="nome" name="nome" 
-           value="<?= htmlspecialchars($usuario['nome']) ?>" minlength="3" required>
+           value="<?= htmlspecialchars($usuario['nome']) ?>" title="Apenas letras" placeholder="Gustavo Boeing" minlength="3" required pattern="[A-Za-zÁ-ÿ\s]+">
 
            <label for="email">Email:</label>
            <input type="email" id="email "name="email" 
-           value="<?= htmlspecialchars($usuario['email']) ?>" minlength="5" required>
+           value="<?= htmlspecialchars($usuario['email']) ?>" title="Coloque um email válido" placeholder="Email@gmail.com" minlength="5" required>
 
            <label for="id_perfil">Perfil:</label>
            <select id="id_perfil" name="id_perfil">
@@ -84,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        <!--Se o usuário logado for adm, exibir opção de alterar senha-->
        <?php if($_SESSION['perfil'] == 1): ?>
            <label for="nova_senha">Nova senha</label>
-           <input type="password" id="nova_senha" name="nova_senha" minlength="8">
+           <input type="password" id="nova_senha" name="nova_senha" title="Deve conter pelo menos 8 caracteres" placeholder="12345678" minlength="8">
        <?php endif; ?>
 
            <button type="submit" onclick return="validarFormularioUsuario()">Alterar</button>
