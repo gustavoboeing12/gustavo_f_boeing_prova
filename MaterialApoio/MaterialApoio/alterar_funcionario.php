@@ -73,19 +73,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
            <label for="nome_funcionario">Nome:</label>
            <input type="text" id="nome_funcionario" name="nome_funcionario" 
-           value="<?= htmlspecialchars($funcionario['nome_funcionario']) ?>"minlength="3" required>
+           value="<?= htmlspecialchars($funcionario['nome_funcionario']) ?>"title="Apenas letras" placeholder="Gustavo Boeing" minlength="3" required pattern="[A-Za-zÁ-ÿ\s]+">
 
            <label for="endereco">Endereco:</label>
            <input type="text" id="endereco "name="endereco" 
-           value="<?= htmlspecialchars($funcionario['endereco']) ?>"minlength="5" required>
+           value="<?= htmlspecialchars($funcionario['endereco']) ?>"title="Mínimo de 5 letras" placeholder="Rua das gaivotas 123" minlength="5" required>
 
            <label for="telefone">Telefone:</label>
            <input type="text" id="telefone "name="telefone" 
-           value="<?= htmlspecialchars($funcionario['telefone']) ?>"size="15" maxlength="15" required>
+           value="<?= htmlspecialchars($funcionario['telefone']) ?>" placeholder="(00)00000-0000" size="15" maxlength="15" required>
 
            <label for="email">E-mail:</label>
            <input type="email" id="email "name="email" 
-           value="<?= htmlspecialchars($funcionario['email']) ?>"minlength="5" required>
+           value="<?= htmlspecialchars($funcionario['email']) ?>"title="Coloque um email válido" placeholder="Email@gmail.com" minlength="5" required>
 
            <button type="submit" onclick return="validarFormulario()">Alterar</button>
            <button type="reset">Cancelar</button>
