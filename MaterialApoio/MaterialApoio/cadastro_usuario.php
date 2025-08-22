@@ -46,13 +46,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
      <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome: </label>
-        <input type="text" id="nome" name="nome" minlength="3" required/>
+        <input type="text" id="nome" name="nome" title="Apenas letras" placeholder="Gustavo Boeing" minlength="3" required pattern="[A-Za-zÁ-ÿ\s]+"/>
 
         <label for="email">E-mail: </label>
-        <input type="email" id="email" name="email" minlength="5" required/>
+        <input type="email" id="email" name="email" title="Coloque um email válido" placeholder="Email@gmail.com" minlength="5" required/>
 
         <label for="senha">Senha: </label>
-        <input type="password" id="senha" name="senha" minlength="8" required/>
+        <input type="password" id="senha" name="senha" title="Deve conter pelo menos 8 caracteres" placeholder="12345678" minlength="8" required/>
 
         <label for="id_perfil">Perfil: </label>
         <select id="id_perfil" name="id_perfil">
