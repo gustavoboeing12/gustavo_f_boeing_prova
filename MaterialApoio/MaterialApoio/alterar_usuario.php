@@ -43,6 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
 <!--Certifique-se que o javascript está sendo carregado corretamente-->
+    <script type="text/javascript" src="valida.js"></script>
     <script src="script.js"></script>
     <title>Alterar usuário</title>
 </head>
@@ -67,11 +68,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
            <label for="nome">Nome:</label>
            <input type="text" id="nome" name="nome" 
-           value="<?= htmlspecialchars($usuario['nome']) ?>" required>
+           value="<?= htmlspecialchars($usuario['nome']) ?>" minlength="3" required>
 
            <label for="email">Email:</label>
            <input type="email" id="email "name="email" 
-           value="<?= htmlspecialchars($usuario['email']) ?>" required>
+           value="<?= htmlspecialchars($usuario['email']) ?>" minlength="5" required>
 
            <label for="id_perfil">Perfil:</label>
            <select id="id_perfil" name="id_perfil">
@@ -83,10 +84,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        <!--Se o usuário logado for adm, exibir opção de alterar senha-->
        <?php if($_SESSION['perfil'] == 1): ?>
            <label for="nova_senha">Nova senha</label>
-           <input type="password" id="nova_senha" name="nova_senha">
+           <input type="password" id="nova_senha" name="nova_senha" minlength="8">
        <?php endif; ?>
 
-           <button type="submit">Alterar</button>
+           <button type="submit" onclick return="validarFormularioUsuario()">Alterar</button>
            <button type="reset">Cancelar</button>
        </form>
      <?php endif; ?>
