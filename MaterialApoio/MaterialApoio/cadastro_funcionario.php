@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <script src="validacoes.js"></script>
+    <script type="text/javascript" src="valida.js"></script>
     <title>Cadastrar funcionário</title>
     <style>
         .phone{
@@ -75,7 +75,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <center>
         <address>Gustavo Fratoni Boeing</address>
      </center>
-     
-     <script type="text/javascript" src="valida.js"></script>
 </body>
 </html>
