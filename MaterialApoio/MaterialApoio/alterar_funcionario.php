@@ -49,8 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
-    <!--Certifique-se que o javascript está sendo carregado corretamente-->
-    <script src="script.js"></script>
+    <script type="text/javascript" src="valida.js"></script>
     <title>Alterar funcionário</title>
 </head>
 <body>
@@ -74,21 +73,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
            <label for="nome_funcionario">Nome:</label>
            <input type="text" id="nome_funcionario" name="nome_funcionario" 
-           value="<?= htmlspecialchars($funcionario['nome_funcionario']) ?>" required>
+           value="<?= htmlspecialchars($funcionario['nome_funcionario']) ?>"minlength="3" required>
 
            <label for="endereco">Endereco:</label>
            <input type="text" id="endereco "name="endereco" 
-           value="<?= htmlspecialchars($funcionario['endereco']) ?>" required>
+           value="<?= htmlspecialchars($funcionario['endereco']) ?>"minlength="5" required>
 
            <label for="telefone">Telefone:</label>
-           <input type="number" id="telefone "name="telefone" 
-           value="<?= htmlspecialchars($funcionario['telefone']) ?>" required>
+           <input type="text" id="telefone "name="telefone" 
+           value="<?= htmlspecialchars($funcionario['telefone']) ?>"size="15" maxlength="15" required>
 
            <label for="email">E-mail:</label>
            <input type="email" id="email "name="email" 
-           value="<?= htmlspecialchars($funcionario['email']) ?>" required>
+           value="<?= htmlspecialchars($funcionario['email']) ?>"minlength="3" required>
 
-           <button type="submit">Alterar</button>
+           <button type="submit" onclick return="validarFormulario()">Alterar</button>
            <button type="reset">Cancelar</button>
        </form>
      <?php endif; ?>
