@@ -56,18 +56,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
      <form action="cadastro_funcionario.php" method="POST">
         <label for="nome_funcionario">Nome: </label>
-        <input type="text" id="nome_funcionario" name="nome_funcionario" required/>
+        <input type="text" id="nome_funcionario" name="nome_funcionario" minlength="3" required/>
 
         <label for="endereco">Endereço: </label>
-        <input type="text" id="endereco" name="endereco" required/>
+        <input type="text" id="endereco" name="endereco" minlength="5" required/>
 
         <label for="telefone">Telefone:</label>
-        <input type="number" id="telefone" name="telefone" class="phone" required/>
+        <input type="text" id="telefone" name="telefone" class="phone" size="15" maxlength="15" required/>
 
         <label for="email">Email: </label>
-        <input type="email" id="email" name="email" required/>
+        <input type="email" id="email" name="email" minlength="5" required/>
 
-        <button type="submit">Salvar</button>
+        <button type="submit" onclick return="validarCadastroFuncionario()">Salvar</button>
         <button type="reset">Cancelar</button>
      </form>
      <a href="principal.php">Voltar</a>
@@ -75,5 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <center>
         <address>Gustavo Fratoni Boeing</address>
      </center>
+     
+     <script type="text/javascript" src="valida.js"></script>
 </body>
 </html>
